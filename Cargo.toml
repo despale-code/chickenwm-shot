@@ -1,0 +1,22 @@
+[package]
+name = "chickenwm-shot"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "ChickenWM screenshot tool: region, window or whole-screen captures to the clipboard and Pictures\\Screenshots"
+
+[[bin]]
+name = "chickenwm-shot"
+path = "src/main.rs"
+
+[dependencies]
+chickenwm-core = { workspace = true, features = ["egui"] }
+anyhow.workspace = true
+tracing.workspace = true
+eframe.workspace = true
+egui.workspace = true
+image.workspace = true
+dirs.workspace = true
+raw-window-handle = "0.6"
+windows = { workspace = true, features = ["Win32_System_DataExchange"] }
