@@ -1,9 +1,10 @@
 [package]
 name = "chickenwm-shot"
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-license.workspace = true
+version = "0.1.1"
+edition = "2024"
+authors = ["ChickenWM Contributors"]
+license = "MIT"
+repository = "https://github.com/despale-code/chickenwm-shot"
 description = "ChickenWM screenshot tool: region, window or whole-screen captures to the clipboard and Pictures\\Screenshots"
 
 [[bin]]
@@ -11,12 +12,12 @@ name = "chickenwm-shot"
 path = "src/main.rs"
 
 [dependencies]
-chickenwm-core = { workspace = true, features = ["egui"] }
-anyhow.workspace = true
-tracing.workspace = true
-eframe.workspace = true
-egui.workspace = true
-image.workspace = true
-dirs.workspace = true
+chickenwm-core = { git = "https://github.com/despale-code/chickenwm-core", tag = "v0.1.1", features = ["egui"] }
+anyhow = { version = "1.0" }
+tracing = { version = "0.1" }
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow"] }
+egui = { version = "0.31" }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+dirs = { version = "6.0" }
 raw-window-handle = "0.6"
-windows = { workspace = true, features = ["Win32_System_DataExchange"] }
+windows = { version = "0.58", features = ["Win32_Foundation", "Win32_System_Threading", "Win32_System_Pipes", "Win32_System_StationsAndDesktops", "Win32_System_IO", "Win32_System_Memory", "Win32_System_Registry", "Win32_System_Diagnostics_Debug", "Win32_System_Diagnostics_ToolHelp", "Win32_System_Performance", "Win32_System_LibraryLoader", "Win32_System_Console", "Win32_System_Com", "Win32_System_SystemServices", "Win32_System_SystemInformation", "Win32_Storage_FileSystem", "Win32_Security", "Win32_Security_Authorization", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_UI_Accessibility", "Win32_UI_Shell", "Win32_UI_HiDpi", "Win32_Graphics_Gdi", "Win32_Graphics_DirectWrite", "Win32_Graphics_Dwm", "Win32_Graphics_Dxgi", "Win32_Graphics_Dxgi_Common", "Win32_System_DataExchange"] }
