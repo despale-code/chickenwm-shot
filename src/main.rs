@@ -556,6 +556,9 @@ fn main() -> Result<()> {
     }
 
     let options = eframe::NativeOptions {
+        // glow, not wgpu: egui_kittest (headless feature) also enables eframe's wgpu backend,
+        // which eframe would then prefer, and wgpu draws transparent windows black on Windows.
+        renderer: eframe::Renderer::Glow,
         viewport: egui::ViewportBuilder::default()
             .with_title("ChickenWM Screenshot")
             .with_decorations(false)
