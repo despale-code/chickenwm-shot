@@ -1,6 +1,6 @@
 [package]
 name = "chickenwm-shot"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2024"
 authors = ["ChickenWM Contributors"]
 license = "MIT"
@@ -12,7 +12,7 @@ name = "chickenwm-shot"
 path = "src/main.rs"
 
 [dependencies]
-chickenwm-core = { git = "https://github.com/despale-code/chickenwm-core", tag = "v0.1.2" }
+chickenwm-core = { git = "https://github.com/despale-code/chickenwm-core", tag = "v0.2.0" }
 anyhow = { version = "1.0" }
 tracing = { version = "0.1" }
 image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
